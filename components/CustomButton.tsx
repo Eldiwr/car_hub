@@ -4,11 +4,11 @@ import React from 'react';
 import Image from 'next/image';
 import { CustomButtonProps } from '@/types';
 
-function CustomButton({ title, containerStyles, handleClick}: CustomButtonProps) {
+function CustomButton({ title, containerStyles, handleClick, btnType}: CustomButtonProps) {
   return (
     <button
         disabled={false}
-        type='button'
+        type={btnType || 'button'}
         className={`custom-btn ${containerStyles}`}
         onClick={() => {}}
         >
