@@ -4,13 +4,13 @@ import React from 'react';
 import Image from 'next/image';
 import { CustomButtonProps } from '@/types';
 
-function CustomButton({ title, containerStyles, handleClick, btnType, textStyles, rightIcon}: CustomButtonProps) {
+function CustomButton({ isDisabled, btnType, containerStyles, textStyles, title, rightIcon, handleClick}: CustomButtonProps) {
   return (
     <button
-        disabled={false}
+        disabled={isDisabled}
         type={btnType || 'button'}
         className={`custom-btn ${containerStyles}`}
-        onClick={() => {}}
+        onClick={handleClick}
         >
             <span className={`flex-1 ${textStyles}`}>
                 {title}
@@ -25,7 +25,6 @@ function CustomButton({ title, containerStyles, handleClick, btnType, textStyles
                 />
               </div>
             )}
-      
     </button>
   )
 }
