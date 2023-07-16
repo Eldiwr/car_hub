@@ -35,7 +35,7 @@ export interface FilterProps {
     year?: number;
     model?: string;
     limit?: number;
-    fuel?: string;
+    fuel?: number;
   }
 
 export interface HomeProps {
